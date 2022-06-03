@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-----------------------------Form-heading---------------------------->
+    <header>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank you for taking the time</p>
+    </header>
+    <!-----------------------------Form-section---------------------------->
+    <main>
+      <div id="main-form">
+        <form id="survey-form" action="https://httpbin.org/get" method="get">
+          <div class="topTab">
+            <div class="labels">
+              <label id="name-label" for="name">Name</label>
+            </div>
+            <div class="bottomTab">
+              <input autofocus type="text" name="name" id="name" class="input-field" required placeholder="Enter your name">
+            </div>
+          </div>
+          <div class="topTab">
+            <div class="labels">
+              <label id="email-label" for="email">Email</label>
+            </div>
+            <div class="bottomTab">
+              <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email">
+            </div>
+          </div>
+          <div class="topTab">
+            <div class="labels">
+              <label id="number-label" for="age">Age<span class="clue">(optional)</span></label>
+            </div>
+            <div class="bottomTab">
+              <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
+            </div>
+          </div>
+          <div class="topTab">
+            <div class="labels">
+              <label for="dropdown">What is your gender?</label>
+            </div>
+            <div class="bottomTab">
+              <select id="dropdown" class="input-field" name="role" required>
+                <option disabled value>Select an option</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="preferNo">Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+          <div class="topTab">
+            <div class="labels">
+              <label for="userRating">Do you like pizza?</label>
+            </div>
+            <div class="bottomTab">
+              <ul style="list-style: none;">
+                <li class="radio"><label><input name="radio-buttons" value="1" type="radio" class="userRating">Yeeees</label></li>
+                <li class="radio"><label><input name="radio-buttons" value="2" type="radio" class="userRating">Maybe</label></li>
+                <li class="radio"><label><input name="radio-buttons" value="3" type="radio" class="userRating">Not sure</label></li>
+              </ul>
+            </div>
+          </div>
+          <div class="topTab">
+            <div class="labels">
+              <label for="sport">What kinds of sport do you like?</label>
+            </div>
+            <div class="bottomTab">
+              <ul id="sports"style="list-style: none;">
+                <li class="checkbox"><label><input name="sport" value="1" type="checkbox" class="userRating">Tennis</label></li>
+                <li class="checkbox"><label><input name="sport" value="2" type="checkbox" class="userRating">Basketball</label></li>
+                <li class="checkbox"><label><input name="sport" value="3" type="checkbox" class="userRating">Football</label></li>
+                <li class="checkbox"><label><input name="sport" value="3" type="checkbox" class="userRating">Volleyball</label></li>
+                <li class="checkbox"><label><input name="sport" value="4" type="checkbox" class="userRating">Ice hockey</label></li>
+                <li class="checkbox"><label><input name="sport" value="5" type="checkbox" class="userRating">Baseball</label></li>
+                <li class="checkbox"><label><input name="sport" value="5" type="checkbox" class="userRating">I don't like sports</label></li>
+              </ul>
+            </div>
+          </div>
+          <div class="topTab">
+            <div class="labels">
+              <label for="comments">Any Comments or Suggestions</label>
+            </div>
+            <div class="bottomTab">
+              <textarea id="comments" class="input-field" style="height:100px; resize:vertical;" name="comment" placeholder="Enter you comment here..."></textarea>
+            </div>
+          </div>
+          <button id="submit" type="submit"><strong>Submit</strong></button>
+        </form>
+      </div>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Technical Documentation Page</title>
+</head>
+<body>  
+  <header id="main-header">
+    <nav id="navbar">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/2560px-Go_Logo_Blue.svg.png" 
+      alt="golang-logo">
+      <header>Golang Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#what_you_should_already_know">What you should already know</a></li>
+        <li><a class="nav-link" href="#hello_world">Hello World</a></li>
+        <li><a class="nav-link" href="#values">Values</a></li>
+        <li><a class="nav-link" href="#variables">Variables</a></li>
+        <li><a class="nav-link" href="#constants">Constants</a></li>
+        <li><a class="nav-link" href="#for">For</a></li>
+        <li><a class="nav-link" href="#if/else">If/Else</a></li>
+        <li><a class="nav-link" href="#arrays">Arrays</a></li>
+        <li><a class="nav-link" href="#functions">Functions</a></li>
+        <li><a class="nav-link" href="#references">References</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-doc">
+    <section class="main-section" id="introduction">
+      <header>Introduction</header>
+      <article class="main-article">
+        <p>The Go programming language is an open source project to make 
+        programmers more productive.</p>
+        <p>Go is expressive, concise, clean, and efficient. Its concurrency mechanisms make 
+          it easy to write programs that get the most out of multicore and networked machines, 
+          while its novel type system enables flexible and modular program construction. Go 
+          compiles quickly to machine code yet has the convenience of garbage collection and 
+          the power of run-time reflection. It's a fast, statically typed, compiled language 
+          that feels like a dynamically typed, interpreted language.</p>
+      </article>
+    </section>
+
+    <section class="main-section" id="what_you_should_already_know">
+      <header>What you should already know</header>
+      <article class="main-article">
+        <p>This guide assumes you have the following basic background:</p>
+        <ul>
+          <li>A general understanding of the math</li>
+          <li>Good working knowledge in informatics</li>
+          <li>Some programming experience. If you are new to programming, 
+            try one of the tutorials linked on the main page about Golang</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="main-section" id="hello_world">
+      <header>Hello world</header>
+      <article class="main-article">
+        <p>To get started with writing Golang code, open the VS Code and write 
+          your first "Hello world" Golang code:</p>
+        <code>package main <br><br> import "fmt" <br><br> func main() {<br>fmt.Println("hello world")<br>}
+        </code>
+        <p>To run the program, put the code in hello-world.go and use go run.</p>
+        <p>Sometimes we'll want to build our programs into binaries. 
+          We can do this using go build. We can then execute the built binary directly.</p>
+        <code>$ go run hello-world.go <br>hello world<br><br>$ go build hello-world.go<br>$ ls<br>hello world 
+          hello-world.go<br><br>$ ./hello-world<br>hello world</brY></code> 
+        <p>Now that we can run and build basic Go programs, let's learn more about the language.</p>
+      </article>
+    </section>
+
+    <section class="main-section" id="values">
+      <header>Values</header>
+      <article class="main-article">
+        <p>Go has various value types including strings, integers, floats, booleans, etc. 
+          Here are a few basic examples. Strings, which can be added together with +.</p>
+        <p>Strings, which can be added together with +.</p>
+        <code>fmt.Println("go" + "lang")</code>
+        <p>Integers and floats.</p>
+        <code>fmt.Println("1+1 =", 1+1)<br>fmt.Println("7.0/3.0 =", 7.0/3.0)</code>
+        <p>Booleans, with boolean operators as you'd expect.</p>
+        <code>fmt.Println(true && false)<br>fmt.Println(true || false)<br>fmt.Println(!true)</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="variables">
+      <header>Variables</header>
+      <article class="main-article">
+        <p>In Go, variables are explicitly declared and used by the compiler to e.g. 
+          check type-correctness of function calls.</p>
+        <p>var declares 1 or more variables.</p>
+        <code>var a = "initial"<br>fmt.Println(a)</code>
+        <p>You can declare multiple variables at once.</p>
+        <code>var b, c int = 1, 2<br>fmt.Println(b, c)</code>
+        <p>Go will infer the type of initialized variables.</p>
+        <code>var d = true<br>fmt.Println(d)</code>
+        <p>Variables declared without a corresponding initialization are zero-valued. 
+          For example, the zero value for an int is 0.</p>
+        <code>var e int<br>fmt.Println(e)</code>
+        <p>The := syntax is shorthand for declaring and initializing a variable, 
+          e.g. for var f string = "apple" in this case.</p>
+        <code>f := "apple"<br>fmt.Println(f)</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="constants">
+      <header>Constants</header>
+      <article class="main-article">
+        <p>Go supports constants of character, string, boolean, and numeric values.</p>
+        <p>const declares a constant value.</p>
+        <code>const s string = "constant"</code>
+        <p>A const statement can appear anywhere a var statement can.</p>
+        <code>const n = 500000000</code>
+        <p>Constant expressions perform arithmetic with arbitrary precision.</p>
+        <code>const d = 3e20 / n<br>fmt.Println(d)</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="for">
+      <header>For</header>
+      <article class="main-article">
+        <p>for is Go's only looping construct. Here are some basic types of for loops.</p>
+        <p>The most basic type, with a single condition.</p>
+        <code>i := 1<br>for i <= 3 {<br>fmt.Println(i)<br>i = i + 1<br>}</code>
+        <p>A classic initial/condition/after for loop.</p>
+        <code>for j := 7; j <= 9; j++ {<br>fmt.Println(j)<br>}</code>
+        <p>for without a condition will loop repeatedly until you break out of the loop 
+          or return from the enclosing function.</p>
+        <code>for {<br>fmt.Println("loop")<br>break<br>}</code>
+        <p>You can also continue to the next iteration of the loop.</p>
+        <code>for n:= 0; n <= 5; n++ {<br>if n%2 == 0 {<br>continue<br>}<br>
+          fmt.Println(n)<br>}<br>}</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="if/else">
+      <header>If/Else</header>
+      <article class="main-article">
+        <p>Branching with if and else in Go is straight-forward.</p>
+        <p>Here's a basic example</p>
+        <code>if 7%2 == 0 {<br>fmt.Println("7 is even")<br>} else {<br>
+          fmt.Println("7 is odd")<br>}</code>
+        <p>You can have an if statement without an else.</p>
+        <code>if 8%4 == 0 {<br>fmt.Println("8 is divisible by 4")<br>}</code>
+        <p>A statement can precede conditionals; any variables declared in this statement 
+          are available in all branches.</p>
+        <code>if num := 9; num < 0 {<br>fmt.Println(num, "is negative")<br>
+          } else if num < 10 {<br>fmt.Println(num, "has 1 digit")<br>} else {<br>
+          fmt.Println(num, "has multiple digits")<br>}<br>}</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="arrays">
+      <header>Arrays</header>
+      <article class="main-article">
+        <p>In Go, an array is a numbered sequence of elements of a specific length.</p>
+        <p>Here we create an array a that will hold exactly 5 ints. 
+          The type of elements and length are both part of the array's type. 
+          By default an array is zero-valued, which for ints means 0s.</p>
+        <code>var a [5]int<br>fmt.Println("emp:", a)</code>
+        <p>We can set a value at an index using the array[index] = value syntax, 
+          and get a value with array[index].</p>
+        <code>a[4] = 100<br>fmt.Println("set:", a)<br>fmt.Println("get:", a[4])</code>
+        <p>The builtin len returns the length of an array.</p>
+        <code>fmt.Println("len:", len(a))</code>
+        <p>Use this syntax to declare and initialize an array in one line.</p>
+        <code>b := [5]int{1, 2, 3, 4, 5}<br>fmt.Println("dcl:", b)</code>
+        <p>Array types are one-dimensional, but you can compose types to 
+          build multi-dimensional data structures.</p>
+        <code>var twoD [2][3]int<br>for i := 0; i < 2; i++ {<br>
+          for j := 0; j < 3; j++ {<br>twoD[i][j] = i + j<br>}<br>]<br>
+          fmt.Println("2d: ", twoD)<br>}</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="functions">
+      <header>Functions</header>
+      <article class="main-article">
+        <p>Functions are central in Go. We'll learn about 
+          functions with a few different examples.</p>
+        <p>Here's a function that takes two ints and 
+          returns their sum as an int.</p>
+        <code>func plus(a int, b int) int {<br>return a + b<br>}</code>
+        <p>When you have multiple consecutive parameters of the same type, 
+          you may omit the type name for the like-typed parameters up to 
+          the final parameter that declares the type.</p>
+        <code>func plusPlus(a, b, c int) int {<br>return a + b + c<br>}</code>
+        <p>Call a function just as you'd expect, with name(args).</p>
+        <code>func main() {<br>res := plus(1, 2)<br>fmt.Println("1+2 =", res)<br><br>
+          res = plusPlus(1, 2, 3)<br>fmt.Println("1+2+3 =", res)<br>}</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="references">
+      <header>References</header>
+      <article class="main-article">
+        <p>All the documentation in this page is taken from this resources:</p>
+        <ul>
+          <li><a href="https://gobyexample.com/">gobyexample</a></li>
+          <li><a href="https://go.dev/doc/">Golang Docs</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <p id="creator">This page created by <a href="https://github.com/generall3">generall3</a></p>
+  </main>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

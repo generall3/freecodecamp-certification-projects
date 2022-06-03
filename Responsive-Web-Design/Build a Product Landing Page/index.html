@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Product Landing Page</title>
+  </head>
+
+  <body>
+    <!---HEADER--->
+    <header id="header">
+      <nav id="nav-bar">
+        <img id="header-img" src="https://www.nvidia.com/content/dam/en-zz/Solutions/about-nvidia/logo-and-brand/01-nvidia-logo-vert-500x200-2c50-p@2x.png" alt="Nvidia logo">
+        <ul>
+          <li><a class="nav-link" href="#features">Features</a></li>
+          <li><a class="nav-link" href="#presentation">Presentation</a></li>
+          <li><a class="nav-link" href="#pricing">Pricing</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!----MAIN---->
+    <main>
+      <article id="container">
+
+        <section class="message-box">
+          <h1>RTX. IT'S ON.</h1>
+          <h2>GEFORCE RTX 30 SERIES</h2>
+          <form id="form" action="https://www.freecodecamp.com/email-submit" type="get">
+            <input id="email" type="email" name="email" placeholder="Enter your Email">
+            <input id="submit" type="submit" value="Get Started" class="btn"></input>
+          </form>
+        </section>
+
+        <section id="features">
+          <div class="feature">
+            <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/events/ces-2022/gaming-laptops/gpu-icon.svg" alt="gpu icon">
+            <h2>The World's <br> Fastest GPUs</h2>
+            <p>NVIDIA Ampere Architecture</p>
+          </div>
+          <div class="feature">
+            <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/events/ces-2022/gaming-laptops/ray-tracing-icon.svg" alt="ray tracing icon">
+            <h2>Most Realistic & <br> Immersive Graphics</h2>
+            <p>2nd Gen Ray Tracing</p>
+          </div>
+          <div class="feature">
+            <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/events/ces-2022/gaming-laptops/dlss-icon.svg" alt="nvidia dlss icon">
+            <h2>AI-accelerated <br> Performance</h2>
+            <p>NVIDIA DLSS</p>
+          </div>
+          <div class="feature">
+            <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/events/ces-2022/gaming-laptops/reflex-icon.svg" alt="nvidia reflex icon">
+            <h2>Lowest <br> System Latency</h2>
+            <p>NVIDIA Reflex</p>
+          </div>
+        </section>
+
+        <section id="presentation">
+          <iframe id="video" src="https://www.youtube.com/embed/oAuszfdldEU" 
+          title="Nvidia RTX Trailer" frameborder="0" allowfullscreen>
+          </iframe>
+        </section>
+        
+        <section id="pricing">
+          <div class="price-box">
+            <h2>RTX 3060</h2>
+            <h3>$329</h3>
+            <p>12GB VRAM, 3,584 CUDA Cores</p>
+            <a href="#" class="btn">SELECT</a>
+          </div>
+          <div class="price-box">
+            <h2>RTX 3070</h2>
+            <h3>$499</h3>
+            <p>8GB VRAM, 5,888 CUDA Cores</p>
+            <a href="#" class="btn">SELECT</a>
+          </div>
+          <div class="price-box">
+            <h2>RTX 3080</h2>
+            <h3>$699</h3>
+            <p>10GB VRAM, 8,704 CUDA Cores</p>
+            <a href="#" class="btn">SELECT</a>
+          </div>
+          <div class="price-box">
+            <h2>RTX 3090</h2>
+            <h3>$1499</h3>
+            <p>24GB VRAM, 10,496 CUDA Cores</p>
+            <a href="#" class="btn">SELECT</a>
+          </div>
+        </section>
+
+      </article> 
+    </main>
+    <!-----FOOTER---->
+    <footer>
+      <section id="foot-section">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </section>
+      <p id="my-page">This Page created by <a id="my-github" href="https://github.com/generall3" target="_blank">generall3</a></p>
+      <p>&copy;Copyright 2022, Nvidia</p>
+    </footer>
+  </body>
+ 
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
