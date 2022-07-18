@@ -1,0 +1,38 @@
+/* GOOGLE FONT*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* VARIABLES */
+$white-text: #fff;
+$black-text: #000;
+$navfoot-color: #FFFAF0;
+$welcome-color: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);;
+$projects-color: #FFE4C4;
+
+/* CSS RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin transition-ease {
+  transition: all 1s ease-in-out;
+}
+
+@mixin media-mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
