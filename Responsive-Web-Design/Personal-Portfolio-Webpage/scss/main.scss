@@ -1,0 +1,244 @@
+@import "config";
+@import "responsive";
+
+body {
+  background: $welcome-color;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.54;
+  text-align: center;
+}
+
+/* NAVIGATION SECTION */
+#navbar {    
+  background: $navfoot-color;
+  top: 0;
+  height: 4.5rem;
+  width: 100vw;
+  position: fixed;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      a {
+        display: inline-block;
+        color: $black-text;
+        margin: 0 50px;
+        padding: 1rem;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 1.3rem;
+        text-decoration: none;
+        list-style: none;
+        
+        &:hover {
+        background: $projects-color;
+        }
+      }
+    }
+  }
+}
+
+/* PROJECTS SECTION */
+main {
+  background: $welcome-color;
+  color: $white-text;
+
+  #welcome-section {
+    font-size: 3rem;
+    height: 100vh;
+    overflow: hidden;
+
+    #title {
+      margin-top: 20%;
+    }
+    p {
+      color: $navfoot-color;
+    }
+  }
+
+  h2 {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    text-decoration: underline;
+  }
+
+  #projects {
+    background: $projects-color;
+    color: $black-text;
+
+    h2 {
+      padding-top: 30px;
+      margin-top: 100px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    #overline {
+      height: 8px;
+      width: 40vw;
+      margin-left: 30vw;
+      margin-bottom: 60px;
+      margin-top: -30px;
+      background: $black-text;
+      border-radius: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      height: 60px;
+      width: 250px;
+      margin-top: 70px;
+      margin-bottom: 100px;
+      padding-top: 10px;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      text-decoration: none;
+      background: $navfoot-color;
+      color: $black-text;
+
+      &:hover {
+        background: $black-text;
+        color: $white-text;
+
+        i {
+          transform: translateX(15px);
+          @include transition-ease;
+        }
+      }
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 3rem;
+      grid-column-gap: 2rem;
+
+      .project {
+
+        a {
+          display: inline-block;
+          text-decoration: none;
+          color: $white-text;
+
+          figure {
+            background: $navfoot-color;
+            border-radius: 5px;
+
+            &:hover {
+              background: $black-text;
+              color: $white-text;
+              @include transition-ease;
+
+              figcaption {
+                color: $navfoot-color;
+              }
+            }
+
+            .project-img {
+              width: 25vw;
+            }
+
+            figcaption {
+              color: $black-text;
+              font-size: 1rem;
+              height: 50px;
+              padding-top: 10px;
+              border-radius: 5px;
+
+              .code {
+                color: $navfoot-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* CONTACT SECTION*/
+#contact {
+  display: inline-block;
+  height: 80vh;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 25vh;
+
+  h2 {
+    font-size: 4rem;
+    text-decoration: none;
+    margin: 0;
+  }
+
+  p {
+    font-style: italic;
+  }
+
+  .socials {
+    padding-top: 70px;
+    
+    a {
+      color: $white-text;
+      text-decoration: none;
+      margin: auto 50px;
+      margin-top: 20px;
+    }
+
+    i {
+      font-size: 2rem;
+      font-weight: 700;
+
+      span {
+        font-family: 'DM Sans', sans-serif;
+        
+      }
+      &:hover {
+        color: $black-text;
+        transform: translateY(10px);
+        @include transition-ease;
+      }
+    }
+  }
+}
+
+/* FOOTER */
+footer {
+  background: $navfoot-color;
+  color: $black-text;
+  height: 8vh;
+  padding: auto 1.5rem;
+  font-size: 1.5rem;
+  overflow: hidden;
+
+  #overline {
+    background: $navfoot-color;
+    border-radius: 3px;
+    height: 4px;
+  }
+
+  #footer-section {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+
+    p {
+      margin: auto;
+    }
+
+    a {
+      text-align:right;
+      color: $black-text;
+      text-decoration: underline;
+    }
+  }
+}
