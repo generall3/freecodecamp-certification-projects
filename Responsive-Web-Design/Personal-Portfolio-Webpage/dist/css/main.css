@@ -1,0 +1,430 @@
+/* GOOGLE FONT*/
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+/* VARIABLES */
+/* CSS RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 450px) {
+  #navbar ul li a {
+    font-size: 1.1rem;
+    margin: auto 10px;
+  }
+  main #welcome-section #title {
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 60%;
+  }
+  main #projects h2 {
+    font-size: 1rem;
+    margin-bottom: 35px;
+  }
+  main #projects #overline {
+    height: 4px;
+    width: 80vw;
+    margin-left: 40px;
+    margin-bottom: 15px;
+  }
+  main #projects .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    justify-content: center;
+  }
+  main #projects .projects-grid .project {
+    justify-self: start;
+  }
+  main #projects .projects-grid .project a figure .project-img {
+    width: 40vh;
+  }
+  main #projects .projects-grid .project a figure figcaption {
+    font-size: 1rem;
+    height: 10px;
+    padding-bottom: 40px;
+  }
+  main #contact {
+    font-size: 1rem;
+    padding-top: 40%;
+  }
+  main #contact h2 {
+    font-size: 2rem;
+  }
+  main #contact .socials {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+  main #contact .socials a {
+    margin: 20px auto;
+  }
+  footer #footer-section p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-max: 450px) and (max-width: 1024px) {
+  main #welcome-section #title {
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 60%;
+  }
+  main #projects h2 {
+    font-size: 1rem;
+    margin-bottom: 35px;
+  }
+  main #projects #overline {
+    height: 4px;
+    width: 80vw;
+    margin-left: 40px;
+    margin-bottom: 15px;
+  }
+  main #projects .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    justify-content: center;
+  }
+  main #projects .projects-grid .project {
+    justify-self: start;
+  }
+  main #projects .projects-grid .project a figure .project-img {
+    width: 30vh;
+  }
+  main #projects .projects-grid .project a figure figcaption {
+    font-size: 1rem;
+    height: 10px;
+    padding-bottom: 40px;
+  }
+  main #contact {
+    font-size: 1rem;
+    padding-top: 40%;
+  }
+  main #contact h2 {
+    font-size: 2rem;
+  }
+  main #contact .socials {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+  main #contact .socials a {
+    margin: 20px auto;
+  }
+}
+body {
+  background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.54;
+  text-align: center;
+}
+
+/* NAVIGATION SECTION */
+#navbar {
+  background: #FFFAF0;
+  top: 0;
+  height: 4.5rem;
+  width: 100vw;
+  position: fixed;
+}
+#navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  height: 100%;
+}
+#navbar ul li {
+  display: flex;
+  align-items: center;
+}
+#navbar ul li a {
+  display: inline-block;
+  color: #000;
+  margin: 0 50px;
+  padding: 1rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-decoration: none;
+  list-style: none;
+}
+#navbar ul li a:hover {
+  background: #FFE4C4;
+}
+
+/* PROJECTS SECTION */
+main {
+  background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+  color: #fff;
+}
+main #welcome-section {
+  font-size: 3rem;
+  height: 100vh;
+  overflow: hidden;
+}
+main #welcome-section #title {
+  margin-top: 20vw;
+}
+main #welcome-section p {
+  color: #FFFAF0;
+}
+main h2 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  text-decoration: underline;
+}
+main #projects {
+  background: #FFE4C4;
+  color: #000;
+}
+main #projects h2 {
+  padding-top: 30px;
+  margin-top: 100px;
+  text-align: center;
+  text-decoration: none;
+}
+main #projects #overline {
+  height: 8px;
+  width: 40vw;
+  margin-left: 30vw;
+  margin-bottom: 60px;
+  margin-top: -30px;
+  background: #000;
+  border-radius: 10px;
+}
+main #projects .btn {
+  display: inline-block;
+  height: 60px;
+  width: 250px;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  padding-top: 10px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  background: #FFFAF0;
+  color: #000;
+}
+main #projects .btn:hover {
+  background: #000;
+  color: #fff;
+}
+main #projects .btn:hover i {
+  transform: translateX(15px);
+  transition: all 1s ease-in-out;
+}
+main #projects .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 3rem;
+  margin: auto 10vw;
+}
+main #projects .projects-grid .project {
+  display: inline-block;
+  width: 80%;
+}
+main #projects .projects-grid .project a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+main #projects .projects-grid .project a figure {
+  background: #FFFAF0;
+  border-radius: 5px;
+}
+main #projects .projects-grid .project a figure:hover {
+  background: #000;
+  color: #fff;
+  transition: all 1s ease-in-out;
+}
+main #projects .projects-grid .project a figure:hover figcaption {
+  color: #FFFAF0;
+}
+main #projects .projects-grid .project a figure .project-img {
+  width: 25vw;
+}
+main #projects .projects-grid .project a figure figcaption {
+  color: #000;
+  font-size: 1rem;
+  height: 50px;
+  padding-top: 10px;
+  border-radius: 5px;
+}
+main #projects .projects-grid .project a figure figcaption .code {
+  color: #FFFAF0;
+}
+
+/* CONTACT SECTION*/
+#contact {
+  display: inline-block;
+  height: 80vh;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 25vh;
+}
+#contact h2 {
+  font-size: 4rem;
+  text-decoration: none;
+  margin: 0;
+}
+#contact p {
+  font-style: italic;
+}
+#contact .socials {
+  padding-top: 70px;
+}
+#contact .socials a {
+  color: #fff;
+  text-decoration: none;
+  margin: auto 50px;
+  margin-top: 20px;
+}
+#contact .socials i {
+  font-size: 2rem;
+  font-weight: 700;
+}
+#contact .socials i span {
+  font-family: "DM Sans", sans-serif;
+}
+#contact .socials i:hover {
+  color: #000;
+  transform: translateY(10px);
+  transition: all 1s ease-in-out;
+}
+
+/* FOOTER */
+footer {
+  background: #FFFAF0;
+  color: #000;
+  height: 8vh;
+  padding: auto 1.5rem;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+footer #overline {
+  background: #FFFAF0;
+  border-radius: 3px;
+  height: 4px;
+}
+footer #footer-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+footer #footer-section p {
+  margin: auto;
+}
+footer #footer-section a {
+  text-align: right;
+  color: #000;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 450px) {
+  #navbar ul li a {
+    font-size: 1.1rem;
+    margin: auto 10px;
+  }
+  main #welcome-section #title {
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 60%;
+  }
+  main #projects h2 {
+    font-size: 1rem;
+    margin-bottom: 35px;
+  }
+  main #projects #overline {
+    height: 4px;
+    width: 80vw;
+    margin-left: 40px;
+    margin-bottom: 15px;
+  }
+  main #projects .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    justify-content: center;
+  }
+  main #projects .projects-grid .project {
+    justify-self: start;
+  }
+  main #projects .projects-grid .project a figure .project-img {
+    width: 40vh;
+  }
+  main #projects .projects-grid .project a figure figcaption {
+    font-size: 1rem;
+    height: 10px;
+    padding-bottom: 40px;
+  }
+  main #contact {
+    font-size: 1rem;
+    padding-top: 40%;
+  }
+  main #contact h2 {
+    font-size: 2rem;
+  }
+  main #contact .socials {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+  main #contact .socials a {
+    margin: 20px auto;
+  }
+  footer #footer-section p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-max: 450px) and (max-width: 1024px) {
+  main #welcome-section #title {
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 60%;
+  }
+  main #projects h2 {
+    font-size: 1rem;
+    margin-bottom: 35px;
+  }
+  main #projects #overline {
+    height: 4px;
+    width: 80vw;
+    margin-left: 40px;
+    margin-bottom: 15px;
+  }
+  main #projects .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    justify-content: center;
+  }
+  main #projects .projects-grid .project {
+    justify-self: start;
+  }
+  main #projects .projects-grid .project a figure .project-img {
+    width: 30vh;
+  }
+  main #projects .projects-grid .project a figure figcaption {
+    font-size: 1rem;
+    height: 10px;
+    padding-bottom: 40px;
+  }
+  main #contact {
+    font-size: 1rem;
+    padding-top: 40%;
+  }
+  main #contact h2 {
+    font-size: 2rem;
+  }
+  main #contact .socials {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+  main #contact .socials a {
+    margin: 20px auto;
+  }
+}/*# sourceMappingURL=main.css.map */
